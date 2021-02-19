@@ -24,7 +24,7 @@ export const aboutData = {
     'After graduating from college with a Film Production degree, I realized I was unsatisfied. Years later, I decided to pursue my passion in Computer Science.',
   paragraphThree:
     "I've recently completed the Flatiron School program in NYC. I'm excited for the next chapter!",
-  resume: 'https://drive.google.com/drive/my-drive', // if no resume, the button will not show up
+  resume: 'https://drive.google.com/file/d/1whLmZ0_WKwlO1CttRO9ReLgcWte-3DYf/view?usp=sharing', // if no resume, the button will not show up
 };
 
 // PROJECTS DATA
