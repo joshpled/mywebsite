@@ -8,6 +8,7 @@ import Footer from './Footer/Footer';
 import { PortfolioProvider } from '../context/context';
 
 import { heroData, aboutData, projectsData, contactData, footerData } from '../mock/data';
+import Medium from './Medium/Medium';
 
 function App() {
   const [hero, setHero] = useState({});
@@ -30,6 +31,7 @@ function App() {
       <About />
       <Projects />
       <Contact />
+      <Medium />
       <Footer />
     </PortfolioProvider>
   );
