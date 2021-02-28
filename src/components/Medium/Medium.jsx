@@ -1,29 +1,34 @@
-import React, { useState } from 'react';
+/* eslint-disable react/state-in-constructor */
+import React, { Component } from 'react';
+
 import axios from 'axios';
 import { Card, Button } from 'react-bootstrap';
+
 import Spinner from './Spinner';
-import c from './SingleBlog.module.css';
 
-const Medium = () => {
-  const [list, setList] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [profile, setProfile] = useState({});
-  const [desc, setDesc] = useState('');
+import './Medium.css';
 
-  axios
-    .get(
-      'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2F%40joshuapleduc'
-    )
-    .then((data) => {
-      setProfile({ avatar: data.data.feed.image, profileLink: data.data.feed.link });
-      setList(data.data.items);
-      setLoading(false);
-    });
+export class Medium extends Component {
+  state = {
+    loading: true,
+    list: [],
+  };
 
-  const renderList = () => {
-    const divStyle = {
-      display: 'inline',
-    };
+  componentDidMount() {
+    axios
+      .get(
+        'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2F%40joshuapleduc'
+      )
+      .then((data) => {
+        this.setState({
+          list: data.data.items,
+          loading: false,
+        });
+      });
+  }
+
+  render() {
+    const { list, loading } = this.state;
     if (loading) {
       return (
         <>
@@ -32,30 +37,32 @@ const Medium = () => {
       );
     }
     return (
-      <div style={divStyle}>
-        {list.map(({ title, author, pubDate, thumbnail, description }) => (
+      <div>
+        <h1 style={{ margin: '1em 0' }}>Medium Articles</h1>
+        {list.map(({ title, thumbnail, link }) => (
           <>
-            <Card style={{ width: '18rem' }}>
+            <Card
+              style={{
+                width: '18rem',
+                display: 'inline-block',
+                verticalAlign: 'top',
+                height: '25em',
+                margin: '1em 1em',
+              }}
+            >
               <Card.Img variant="top" src={thumbnail} />
               <Card.Body>
                 <Card.Title>{title}</Card.Title>
-                <Card.Text>
-                  {
-                    new DOMParser()
-                      .parseFromString(description, 'text/html')
-                      .getElementsByTagName('blockquote')[0].innerText
-                  }
-                </Card.Text>
-                <Button variant="primary">Go somewhere</Button>
               </Card.Body>
+              <Button variant="primary" href={link}>
+                Go to Article
+              </Button>
             </Card>
           </>
         ))}
       </div>
     );
-  };
-
-  return <div>{renderList()}</div>;
-};
+  }
+}
 
 export default Medium;
