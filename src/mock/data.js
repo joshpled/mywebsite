@@ -31,6 +31,16 @@ export const aboutData = {
 export const projectsData = [
   {
     id: nanoid(),
+    img: 'project-4.png',
+    title: 'PIBA Foundation Admin Dashboard',
+    info:
+      'Increase productivity by creating a fully functional admin dashboard that handles all inner workings of the organization.',
+    info2: 'Technologies: MERN (MongoDB, Express, React, Node) Hooks, Redux, Thunk, Bootstrap, Apollo, GraphQL',
+    url: 'https://github.com/joshpled/piba-frontend',
+    repo: 'https://awesome-swartz-52ff48.netlify.app/', // if no repo, the button will not show up
+  },
+  {
+    id: nanoid(),
     img: 'project-1.png',
     title: 'Tamapuri 2',
     info:
