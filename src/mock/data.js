@@ -10,7 +10,7 @@ export const headData = {
 // HERO DATA
 export const heroData = {
   title: 'Hi, my name is',
-  name: 'Josh',
+  name: 'Joshua',
   subtitle: "I'm a Software Engineer and Full Stack Developer",
   cta: 'GET MORE INFO',
 };
@@ -35,9 +35,10 @@ export const projectsData = [
     title: 'PIBA Foundation Admin Dashboard',
     info:
       'Increase productivity by creating a fully functional admin dashboard that handles all inner workings of the organization.',
-    info2: 'Technologies: MERN (MongoDB, Express, React, Node) Hooks, Redux, Thunk, Bootstrap, Apollo, GraphQL',
-    url: 'https://github.com/joshpled/piba-frontend',
-    repo: 'https://awesome-swartz-52ff48.netlify.app/', // if no repo, the button will not show up
+    info2:
+      'Technologies: MERN (MongoDB, Express, React, Node) Hooks, Redux, Thunk, Bootstrap, Apollo, GraphQL',
+    url: 'https://awesome-swartz-52ff48.netlify.app/',
+    repo: 'https://github.com/joshpled/piba-frontend', // if no repo, the button will not show up
   },
   {
     id: nanoid(),
