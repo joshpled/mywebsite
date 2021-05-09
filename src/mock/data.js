@@ -37,8 +37,8 @@ export const projectsData = [
       'Increase productivity by creating a fully functional admin dashboard that handles all inner workings of the organization.',
     info2:
       'Technologies: MERN (MongoDB, Express, React, Node) Hooks, Redux, Thunk, Bootstrap, Apollo, GraphQL',
-    url: 'https://awesome-swartz-52ff48.netlify.app/',
-    repo: 'https://github.com/joshpled/piba-frontend', // if no repo, the button will not show up
+    url: 'https://joshuapleduc.com',
+    repo: '', // if no repo, the button will not show up
   },
   {
     id: nanoid(),
