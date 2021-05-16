@@ -31,6 +31,15 @@ export const aboutData = {
 export const projectsData = [
   {
     id: nanoid(),
+    img: 'project-5.png',
+    title: 'Tic-Tac-Toe, Working project',
+    info: 'Classic tic-tac-toe game. This is a project for learning a few things:',
+    info2: 'Context API, React Native, and Deployment on Github Pages',
+    url: 'https://joshpled.github.io/tic-tac-toe/',
+    repo: 'https://github.com/joshpled/tic-tac-toe/', // if no repo, the button will not show up
+  },
+  {
+    id: nanoid(),
     img: 'project-4.png',
     title: 'PIBA Foundation Admin Dashboard',
     info:
