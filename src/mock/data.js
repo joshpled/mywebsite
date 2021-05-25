@@ -31,6 +31,16 @@ export const aboutData = {
 export const projectsData = [
   {
     id: nanoid(),
+    img: 'project-6.png',
+    title: 'Vue, Todo List',
+    info:
+      'After learning Vue over the weekend I created a todo list app to practice some of the basics.',
+    info2: 'Vue, and Deployment on Github Pages',
+    url: 'https://joshpled.github.io/Vue-ToDoList/',
+    repo: 'https://github.com/joshpled/Vue-ToDoList', // if no repo, the button will not show up
+  },
+  {
+    id: nanoid(),
     img: 'project-5.png',
     title: 'Tic-Tac-Toe, Working project',
     info: 'Classic tic-tac-toe game. This is a project for learning a few things:',
